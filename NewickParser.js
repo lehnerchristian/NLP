@@ -29,7 +29,7 @@ NewickParser.prototype.parseToJSON = function(newickString) {
     }
     else {
       if(splitArray[i].charAt(splitArray[i].length - 2) === ")" && splitArray[i].charAt(splitArray[i].length - 1) === ")") {
-        var word = splitArray[i].slice(0, splitArray[i].length - 2);
+        var word = splitArray[i].replace(/\)/g, "");
         parentNodes[parentNodes.length-1].tag += " " + word;
         parentNodes.pop();
         parentNodes.pop();
