@@ -58,10 +58,24 @@ NewickParser.prototype.parseToJSON = function(newickString) {
   var openParentheses = 0;
 
   var children = this.data.children;
-  console.log(children);
 
-  var parentNode = "ROOT";
+  var parentNode = this.data.tag;
 
+  for(var i = 0; i < splitArray.length; i++) {
+    if(splitArray[i].charAt(0) === "(") {
+      var tag = splitArray[i].slice(1);
+      
+      this.insertChildNode(tag, children);
+    }
+    else {
+
+    }
+  }
+
+  console.log(this.data.children);
+
+
+  /*
   for(var i = 0; i < splitArray.length; i++) {
     if(splitArray[i].length > 1 && splitArray[i].charAt(0) == "(") {
       ++openParentheses;
@@ -70,15 +84,23 @@ NewickParser.prototype.parseToJSON = function(newickString) {
       this.insertChildNode(splitArray[i], parentNode, children);
 
 
+
+    }
+    else if(splitArray[i].charAt(splitArray[i].length) == ")") {
       parentNode = splitArray[i];
     }
+
   }
+  */
 
 }
 
-NewickParser.prototype.insertChildNode = function(tag, parentNode, children) {
+NewickParser.prototype.insertChildNode = function(tag, children) {
 
+  children.push(tag);
   console.log("Tag: " + tag);
+
+  /*
   console.log("Parent: " + parentNode);
   console.log("Children: " + JSON.stringify(children));
 
@@ -89,7 +111,7 @@ NewickParser.prototype.insertChildNode = function(tag, parentNode, children) {
   };
 
   children.push(child);
-
+  */
   /*
   if(node && node.length !== 0) {
     node.push(child);
@@ -103,5 +125,6 @@ NewickParser.prototype.insertChildNode = function(tag, parentNode, children) {
 
 
 var newickParser = new NewickParser();
-newickParser.parseToJSON("( (S (NP (DT The) (NN horse)) (VP (VBD raced) (PP (IN past) (NP (DT the) (NN barn) (NN fell.))))) )");
+newickParser.parseToJSON("(NP (NNP The) (NNPS House))");
+//newickParser.parseToJSON("( (S (NP (DT The) (NN horse)) (VP (VBD raced) (PP (IN past) (NP (DT the) (NN barn) (NN fell.))))) )");
 
