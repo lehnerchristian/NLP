@@ -11,7 +11,6 @@ var sentences = [
 var child = spawn("java", ["-Xmx1048m", "-jar", "parsers/berkeley/BerkeleyParser-1.7.jar", "-gr", "parsers/berkeley/eng_sm6.gr"]);
 
 child.stdout.on('data', function (data) {
-  console.log(data.toString());
   newickParser.parseToJSON(data.toString());
 });
 
