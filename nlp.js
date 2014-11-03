@@ -1,6 +1,8 @@
+var http = require('http');
 var spawn = require('child_process').spawn;
 var NewickParser = require('./NewickParser');
 var newickParser = new NewickParser();
+var parsedData = [];
 
 var sentences = [
   "The prime number few.\n",
@@ -29,7 +31,9 @@ var sentences = [
 var child = spawn("java", ["-Xmx1048m", "-jar", "parsers/berkeley/BerkeleyParser-1.7.jar", "-gr", "parsers/berkeley/eng_sm6.gr"]);
 
 child.stdout.on('data', function (data) {
-  newickParser.parseToJSON(data.toString());
+  var json = newickParser.parseToJSON(data.toString());
+  parsedData.push(json);
+  console.log(JSON.stringify(json, null, 2));
 });
 
 for (var i = 0; i < sentences.length; i++) {
@@ -43,3 +47,14 @@ child.stderr.on('data', function (data) {
 child.on('close', function (code) {
   console.log('child process exited with code ' + code);
 });
+
+
+http.createServer(function(request, response) {
+  response.writeHead(200);
+  if(parsedData.length < sentences.length) {
+    response.write("Parsing in progress...");
+    response.end();
+  }
+  response.write(JSON.stringify(parsedData));
+  response.end();
+}).listen(3000);
