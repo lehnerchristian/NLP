@@ -12,7 +12,6 @@ for(var i = 0; i < sentences.length; i++) {
   child.stdin.write(sentences[i]);
 }
 
-
 child.stderr.on('data', function (data) {
   console.log('stderr: ' + data);
 });
@@ -27,18 +26,20 @@ child.on('close', function (code) {
 // =============
 
 var NewickParser = function() {
+  this.init();
+};
+
+NewickParser.prototype.init = function(){
   this.data = {
     tag: "ROOT",
     parent: "null",
     children: []
   };
-
 }
 
 NewickParser.prototype.parseToJSON = function(newickString) {
-
   var splitArray = newickString.split(" ");
-
+  this.init();
 
   // stack of parent nodes
   var parentNodes = [];
@@ -47,89 +48,39 @@ NewickParser.prototype.parseToJSON = function(newickString) {
   for(var i = 0; i < splitArray.length; i++) {
     if(splitArray[i].charAt(0) === "(") {
       var tag = splitArray[i].slice(1);
-
-      parentNodes.push(this.insertChildNode(tag, parentNodes[parentNodes.length - 1], parentNodes[parentNodes.length - 1].children));
-
+      parentNodes.push(this.insertChildNode(tag, parentNodes[parentNodes.length - 1]));
     }
     else {
       if(splitArray[i].charAt(splitArray[i].length - 2) === ")" && splitArray[i].charAt(splitArray[i].length - 1) === ")") {
         var word = splitArray[i].slice(0, splitArray[i].length - 2);
-        parentNodes[parentNodes.length-1].word = word;
+        parentNodes[parentNodes.length-1].tag += " " + word;
         parentNodes.pop();
         parentNodes.pop();
-        console.log(word);
       }
       else if(splitArray[i].charAt(splitArray[i].length - 1) === ")") {
         var word = splitArray[i].slice(0, splitArray[i].length - 1);
-        parentNodes[parentNodes.length-1].word = word;
-        console.log(word);
+        parentNodes[parentNodes.length-1].tag += " " + word;
         parentNodes.pop();
       }
     }
   }
-
-  console.log(JSON.stringify(this.data.children));
-
-
-  /*
-  for(var i = 0; i < splitArray.length; i++) {
-    if(splitArray[i].length > 1 && splitArray[i].charAt(0) == "(") {
-      ++openParentheses;
-
-      splitArray[i] = splitArray[i].slice(1);
-      this.insertChildNode(splitArray[i], parentNode, children);
-
-
-
-    }
-    else if(splitArray[i].charAt(splitArray[i].length) == ")") {
-      parentNode = splitArray[i];
-    }
-
-  }
-  */
-
 }
 
-NewickParser.prototype.insertChildNode = function(tag, parentNode, children) {
+NewickParser.prototype.print = function(){
+  console.log(JSON.stringify(this.data, null, 2));
+}
 
-
-  //if(parentNode !== )
-
+NewickParser.prototype.insertChildNode = function(tag, parentNode) {
+  if(!parentNode.children){
+    parentNode.children = [];
+  }
 
   var child = {
-    tag: tag,
-    word: null,
-    children: []
+    tag: tag
   };
 
-  children.push(child);
-
-  console.log("Tag: " + tag);
-
+  parentNode.children.push(child);
   return child;
-
-  /*
-  console.log("Parent: " + parentNode);
-  console.log("Children: " + JSON.stringify(children));
-
-  var child = {
-    tag: tag,
-    parent: parentNode,
-    children: []
-  };
-
-  children.push(child);
-  */
-  /*
-  if(node && node.length !== 0) {
-    node.push(child);
-  }
-  else if(node) {
-    // node immer das gleiche???
-    this.insertChildNode(tag, parentNode, node);
-  }
-  */
 }
 
 
