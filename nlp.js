@@ -33,46 +33,42 @@ var NewickParser = function() {
     children: []
   };
 
-  this.characters = [];
-  this.nodes = [];
-
-
-  // ( (S (NP (DT The) (NN horse)) (VP (VBD raced) (PP (IN past) (NP (DT the) (NN barn) (NN fell.))))) )
-  this.newickTags = [
-    "S",
-    "NP",
-    "DT",
-    "NN",
-    "VP",
-    "VBD",
-    "PP",
-    "IN",
-    "NP",
-    "DT"
-  ];
 }
 
 NewickParser.prototype.parseToJSON = function(newickString) {
 
   var splitArray = newickString.split(" ");
-  var openParentheses = 0;
 
-  var children = this.data.children;
 
-  var parentNode = this.data.tag;
+  // stack of parent nodes
+  var parentNodes = [];
+  parentNodes.push(this.data);
 
   for(var i = 0; i < splitArray.length; i++) {
     if(splitArray[i].charAt(0) === "(") {
       var tag = splitArray[i].slice(1);
-      
-      this.insertChildNode(tag, children);
+
+      parentNodes.push(this.insertChildNode(tag, parentNodes[parentNodes.length - 1], parentNodes[parentNodes.length - 1].children));
+
     }
     else {
-
+      if(splitArray[i].charAt(splitArray[i].length - 2) === ")" && splitArray[i].charAt(splitArray[i].length - 1) === ")") {
+        var word = splitArray[i].slice(0, splitArray[i].length - 2);
+        parentNodes[parentNodes.length-1].word = word;
+        parentNodes.pop();
+        parentNodes.pop();
+        console.log(word);
+      }
+      else if(splitArray[i].charAt(splitArray[i].length - 1) === ")") {
+        var word = splitArray[i].slice(0, splitArray[i].length - 1);
+        parentNodes[parentNodes.length-1].word = word;
+        console.log(word);
+        parentNodes.pop();
+      }
     }
   }
 
-  console.log(this.data.children);
+  console.log(JSON.stringify(this.data.children));
 
 
   /*
@@ -95,10 +91,23 @@ NewickParser.prototype.parseToJSON = function(newickString) {
 
 }
 
-NewickParser.prototype.insertChildNode = function(tag, children) {
+NewickParser.prototype.insertChildNode = function(tag, parentNode, children) {
 
-  children.push(tag);
+
+  //if(parentNode !== )
+
+
+  var child = {
+    tag: tag,
+    word: null,
+    children: []
+  };
+
+  children.push(child);
+
   console.log("Tag: " + tag);
+
+  return child;
 
   /*
   console.log("Parent: " + parentNode);
