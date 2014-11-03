@@ -47,25 +47,6 @@ NewickParser.prototype.parseToJSON = function(newickString) {
 
   console.log(JSON.stringify(this.data, null, 2));
 
-
-  /*
-   for(var i = 0; i < splitArray.length; i++) {
-   if(splitArray[i].length > 1 && splitArray[i].charAt(0) == "(") {
-   ++openParentheses;
-
-   splitArray[i] = splitArray[i].slice(1);
-   this.insertChildNode(splitArray[i], parentNode, children);
-
-
-
-   }
-   else if(splitArray[i].charAt(splitArray[i].length) == ")") {
-   parentNode = splitArray[i];
-   }
-
-   }
-   */
-
 }
 
 NewickParser.prototype.insertChildNode = function(tag, parentNode, children) {
@@ -80,28 +61,6 @@ NewickParser.prototype.insertChildNode = function(tag, parentNode, children) {
   console.log("Tag: " + tag);
 
   return child;
-
-  /*
-   console.log("Parent: " + parentNode);
-   console.log("Children: " + JSON.stringify(children));
-
-   var child = {
-   tag: tag,
-   parent: parentNode,
-   children: []
-   };
-
-   children.push(child);
-   */
-  /*
-   if(node && node.length !== 0) {
-   node.push(child);
-   }
-   else if(node) {
-   // node immer das gleiche???
-   this.insertChildNode(tag, parentNode, node);
-   }
-   */
 }
 
 
