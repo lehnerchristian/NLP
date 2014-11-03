@@ -45,6 +45,7 @@ NewickParser.prototype.parseToJSON = function(newickString) {
 
 NewickParser.prototype.print = function(){
   console.log(JSON.stringify(this.data, null, 2));
+
 }
 
 NewickParser.prototype.insertChildNode = function(tag, parentNode) {
