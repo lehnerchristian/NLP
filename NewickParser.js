@@ -23,7 +23,7 @@ NewickParser.prototype.parseToJSON = function(newickString) {
   parentNodes.push(this.data);
 
   for(var i = 0; i < splitArray.length; i++) {
-    if(splitArray[i].length > 0 && splitArray[i].charAt(0) === "(") {
+    if(splitArray[i].length > 1 && splitArray[i].charAt(0) === "(") {
       var tag = splitArray[i].slice(1);
       parentNodes.push(this.insertChildNode(tag, parentNodes[parentNodes.length - 1]));
     }
