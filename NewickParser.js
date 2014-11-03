@@ -41,6 +41,7 @@ NewickParser.prototype.parseToJSON = function(newickString) {
       }
     }
   }
+  this.print();
 }
 
 NewickParser.prototype.print = function(){
