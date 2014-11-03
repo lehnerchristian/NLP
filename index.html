@@ -22,8 +22,10 @@
   </style>
 </head>
 <body></body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" rel="script">
+
   window.onload = function () {
     // ************** Generate the tree diagram	 *****************
     var margin = {top: 20, right: 120, bottom: 20, left: 120},
@@ -40,9 +42,15 @@
               return [d.y, d.x];
             });
 
-    for (var i = 0; i < root.length; i++) {
-      draw(root[i]);
-    }
+    var request = $.get("data/stanford.txt");
+    request.success(function(result) {
+      for (var i = 0; i < result.length; i++) {
+        draw(result[i]);
+      }
+    });
+    request.error(function(jqXHR, textStatus, errorThrown) {
+      alert("error!!!");
+    });
 
     function draw(source) {
 
@@ -53,7 +61,7 @@
               .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
       // Compute the new tree layout.
-      var nodes = tree.nodes(root).reverse(),
+      var nodes = tree.nodes(source).reverse(),
               links = tree.links(nodes);
 
       // Normalize for fixed-depth.
