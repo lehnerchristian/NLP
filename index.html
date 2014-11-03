@@ -41,12 +41,14 @@
               return [d.y, d.x];
             });
 
-    var request = $.get("data/stanford.txt");
-    request.success(function(result) {
-      for (var i = 0; i < result.length; i++) {
-        draw(result[i]);
-      }
-    });
+      // load the external data
+      d3.json("data/berkeley.json", function(error, treeData) {
+          for (var i = 0; i < treeData.length; i++) {
+              draw(treeData[i]);
+          }
+      });
+
+
     request.error(function(jqXHR, textStatus, errorThrown) {
       alert("error!!!");
     });
