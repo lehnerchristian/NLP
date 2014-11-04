@@ -4,6 +4,13 @@ var NewickParser = require('./NewickParser');
 var newickParser = new NewickParser();
 var parsedData = [];
 
+var result = "";
+
+var parse = function (data) {
+  var json = newickParser.parseToJSON(data);
+  parsedData.push(json);
+}
+
 var child = spawn("java", [
   "-mx1024m",
   "-cp",
@@ -15,12 +22,21 @@ var child = spawn("java", [
   "./parsers/stanford/input.txt"
 ]);
 
-child.stdout.on('data', function (data) {
-  if(data.toString().indexOf("ROOT") === -1){
-    var json = newickParser.parseToJSON(data.toString());
-    parsedData.push(json);
+child.stdout.on('data', function (buffer) {
+  var data = buffer.toString();
+
+  if (data.indexOf("ROOT") !== -1) {
+    data = data.slice(5);
+  }
+
+  result += data;
+  if ( data.indexOf(".)))") > -1) {
+    parse(result);
+    result = "";
   }
 });
+
+
 
 child.stderr.on('data', function (data) {
   //console.log('stderr: ' + data);
@@ -30,9 +46,9 @@ child.on('close', function (code) {
   //console.log('child process exited with code ' + code);
 });
 
-http.createServer(function(request, response) {
+http.createServer(function (request, response) {
   response.writeHead(200);
-  if(parsedData.length <= 21) {
+  if (parsedData.length <= 1) {
     response.write("Parsing in progress...");
     response.end();
   }
