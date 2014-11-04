@@ -33,7 +33,7 @@ var child = spawn("java", ["-Xmx1048m", "-jar", "parsers/berkeley/BerkeleyParser
 child.stdout.on('data', function (data) {
   var json = newickParser.parseToJSON(data.toString());
   parsedData.push(json);
-  console.log(JSON.stringify(json, null, 2));
+  //console.log(JSON.stringify(json, null, 2));
 });
 
 for (var i = 0; i < sentences.length; i++) {

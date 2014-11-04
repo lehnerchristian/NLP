@@ -41,7 +41,7 @@
             });
 
       // load the external data
-      d3.json("data/berkeley.json", function(error, treeData) {
+      d3.json("data/stanford.json", function(error, treeData) {
           for (var i = 0; i < treeData.length; i++) {
               draw(treeData[i]);
           }

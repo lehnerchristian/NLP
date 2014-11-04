@@ -16,8 +16,10 @@ var child = spawn("java", [
 ]);
 
 child.stdout.on('data', function (data) {
-  var json = newickParser.parseToJSON(data.toString());
-  parsedData.push(json);
+  if(data.toString().indexOf("ROOT") === -1){
+    var json = newickParser.parseToJSON(data.toString());
+    parsedData.push(json);
+  }
 });
 
 child.stderr.on('data', function (data) {
