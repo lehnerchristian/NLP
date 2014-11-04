@@ -3,12 +3,120 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "ROOT",
+        "name": "NP",
         "parent": "ROOT",
         "children": [
           {
             "name": "NP",
-            "parent": "ROOT"
+            "parent": "NP",
+            "children": [
+              {
+                "name": "DT",
+                "parent": "NP",
+                "tag": "undefined The"
+              },
+              {
+                "name": "JJ",
+                "parent": "NP",
+                "tag": "undefined prime"
+              },
+              {
+                "name": "NN",
+                "parent": "NP",
+                "tag": "undefined number"
+              }
+            ]
+          },
+          {
+            "name": "ADJP",
+            "parent": "NP",
+            "children": [
+              {
+                "name": "JJ",
+                "parent": "ADJP",
+                "tag": "undefined few"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NNP",
+                "parent": "NP",
+                "tag": "undefined Fat"
+              },
+              {
+                "name": "NNS",
+                "parent": "NP",
+                "tag": "undefined people"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBP",
+                "parent": "VP",
+                "tag": "undefined eat"
+              },
+              {
+                "name": "NP",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "NNS",
+                    "parent": "NP",
+                    "tag": "undefined accumulates"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S"
           }
         ]
       }
@@ -22,26 +130,14 @@
         "parent": "ROOT",
         "children": [
           {
-            "name": "DT The",
-            "parent": "NP"
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined The"
           },
           {
-            "name": "JJ prime",
-            "parent": "NP"
-          },
-          {
-            "name": "NN number",
-            "parent": "NP"
-          }
-        ]
-      },
-      {
-        "name": "ADJP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "JJ few",
-            "parent": "ADJP"
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined cotton"
           }
         ]
       }
@@ -51,44 +147,21 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "ROOT",
+        "name": "SBAR",
         "parent": "ROOT",
         "children": [
           {
             "name": "S",
-            "parent": "ROOT",
+            "parent": "SBAR",
             "children": [
               {
                 "name": "NP",
                 "parent": "S",
                 "children": [
                   {
-                    "name": "NNP Fat",
-                    "parent": "NP"
-                  },
-                  {
-                    "name": "NNS people",
-                    "parent": "NP"
-                  }
-                ]
-              },
-              {
-                "name": "VP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "VBP eat",
-                    "parent": "VP"
-                  },
-                  {
-                    "name": "NP",
-                    "parent": "VP",
-                    "children": [
-                      {
-                        "name": "NNS accumulates",
-                        "parent": "NP"
-                      }
-                    ]
+                    "name": "NN",
+                    "parent": "NP",
+                    "tag": "undefined clothing"
                   }
                 ]
               }
@@ -102,39 +175,13 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "ROOT",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "S",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
+        "name": "VP",
         "parent": "ROOT",
         "children": [
           {
-            "name": "DT The",
-            "parent": "NP"
+            "name": "VBZ",
+            "parent": "VP",
+            "tag": "undefined is"
           }
         ]
       }
@@ -144,8 +191,73 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "NN cotton",
-        "parent": "ROOT"
+        "name": "RB",
+        "parent": "ROOT",
+        "tag": "undefined usually"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBN",
+            "parent": "VP",
+            "tag": "undefined made"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "PP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "IN",
+            "parent": "PP",
+            "tag": "undefined of"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBZ",
+            "parent": "VP",
+            "tag": "undefined grows"
+          }
+        ]
       }
     ]
   },
@@ -153,10 +265,32 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "ROOT",
-        "parent": "ROOT"
+        "name": "PP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "IN",
+            "parent": "PP",
+            "tag": "undefined in"
+          },
+          {
+            "name": "NP",
+            "parent": "PP",
+            "children": [
+              {
+                "name": "NNP",
+                "parent": "NP",
+                "tag": "undefined Mississippi"
+              }
+            ]
+          }
+        ]
       }
     ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
   },
   {
     "name": "ROOT",
@@ -175,7 +309,1029 @@
         "parent": "ROOT",
         "children": [
           {
-            "name": "IN Until",
+            "name": "IN",
+            "parent": "PP",
+            "tag": "undefined Until"
+          },
+          {
+            "name": "NP",
+            "parent": "PP",
+            "children": [
+              {
+                "name": "DT",
+                "parent": "NP",
+                "tag": "undefined the"
+              },
+              {
+                "name": "NN",
+                "parent": "NP",
+                "tag": "undefined police"
+              },
+              {
+                "name": "NN",
+                "parent": "NP",
+                "tag": "undefined arrest"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined the"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined drug"
+          },
+          {
+            "name": "NNS",
+            "parent": "NP",
+            "tag": "undefined dealers"
+          }
+        ]
+      },
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBP",
+            "parent": "VP",
+            "tag": "undefined control"
+          },
+          {
+            "name": "NP",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "DT",
+                "parent": "NP",
+                "tag": "undefined the"
+              },
+              {
+                "name": "NN",
+                "parent": "NP",
+                "tag": "undefined street"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NP",
+                "parent": "NP",
+                "children": [
+                  {
+                    "name": "DT",
+                    "parent": "NP",
+                    "tag": "undefined The"
+                  },
+                  {
+                    "name": "NN",
+                    "parent": "NP",
+                    "tag": "undefined man"
+                  }
+                ]
+              },
+              {
+                "name": "SBAR",
+                "parent": "NP",
+                "children": [
+                  {
+                    "name": "WHNP",
+                    "parent": "SBAR",
+                    "children": [
+                      {
+                        "name": "WP",
+                        "parent": "WHNP",
+                        "tag": "undefined who"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "S",
+                    "parent": "SBAR",
+                    "children": [
+                      {
+                        "name": "VP",
+                        "parent": "S",
+                        "children": [
+                          {
+                            "name": "VBZ",
+                            "parent": "VP",
+                            "tag": "undefined hunts"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBZ",
+            "parent": "VP",
+            "tag": "undefined ducks"
+          },
+          {
+            "name": "PRT",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "RP",
+                "parent": "PRT",
+                "tag": "undefined out"
+              }
+            ]
+          },
+          {
+            "name": "PP",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "IN",
+                "parent": "PP",
+                "tag": "undefined on"
+              },
+              {
+                "name": "NP",
+                "parent": "PP",
+                "children": [
+                  {
+                    "name": "NNS",
+                    "parent": "NP",
+                    "tag": "undefined weekends"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "SBAR",
+            "parent": "S",
+            "children": [
+              {
+                "name": "WHADVP",
+                "parent": "SBAR",
+                "children": [
+                  {
+                    "name": "WRB",
+                    "parent": "WHADVP",
+                    "tag": "undefined When"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NNP",
+                "parent": "NP",
+                "tag": "undefined Fred"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBZ",
+                "parent": "VP",
+                "tag": "undefined eats"
+              },
+              {
+                "name": "NP",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "NN",
+                    "parent": "NP",
+                    "tag": "undefined food"
+                  }
+                ]
+              },
+              {
+                "name": "VP",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "VBZ",
+                    "parent": "VP",
+                    "tag": "undefined gets"
+                  },
+                  {
+                    "name": "VP",
+                    "parent": "VP",
+                    "children": [
+                      {
+                        "name": "VBN",
+                        "parent": "VP",
+                        "tag": "undefined thrown"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NNP",
+                "parent": "NP",
+                "tag": "undefined Mary"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBD",
+                "parent": "VP",
+                "tag": "undefined gave"
+              },
+              {
+                "name": "NP",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "DT",
+                    "parent": "NP",
+                    "tag": "undefined the"
+                  },
+                  {
+                    "name": "NN",
+                    "parent": "NP",
+                    "tag": "undefined child"
+                  }
+                ]
+              },
+              {
+                "name": "SBAR",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "S",
+                    "parent": "SBAR",
+                    "children": [
+                      {
+                        "name": "NP",
+                        "parent": "S",
+                        "children": [
+                          {
+                            "name": "DT",
+                            "parent": "NP",
+                            "tag": "undefined the"
+                          },
+                          {
+                            "name": "NN",
+                            "parent": "NP",
+                            "tag": "undefined dog"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "VP",
+                        "parent": "S",
+                        "children": [
+                          {
+                            "name": "VBD",
+                            "parent": "VP",
+                            "tag": "undefined bit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined a"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined bandaid"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "DT",
+                "parent": "NP",
+                "tag": "undefined The"
+              },
+              {
+                "name": "NN",
+                "parent": "NP",
+                "tag": "undefined girl"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBD",
+                "parent": "VP",
+                "tag": "undefined told"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined the"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined story"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBN",
+            "parent": "VP",
+            "tag": "undefined cried"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "PRP",
+            "parent": "NP",
+            "tag": "undefined I"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBD",
+            "parent": "VP",
+            "tag": "undefined convinced"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "SBAR",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "PRP$",
+            "parent": "NP",
+            "tag": "undefined her"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NNS",
+        "parent": "ROOT",
+        "tag": "undefined children"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBP",
+            "parent": "VP",
+            "tag": "undefined are"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "ADVP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "RB",
+            "parent": "ADVP",
+            "tag": "undefined noisy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NNP",
+                "parent": "NP",
+                "tag": "undefined Helen"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBZ",
+                "parent": "VP",
+                "tag": "undefined is"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBG",
+            "parent": "VP",
+            "tag": "undefined expecting"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NN",
+                "parent": "NP",
+                "tag": "undefined tomorrow"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "TO",
+            "parent": "VP",
+            "tag": "undefined to"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VB",
+            "parent": "VP",
+            "tag": "undefined be"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined a"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "JJ",
+        "parent": "ROOT",
+        "tag": "undefined bad"
+      },
+      {
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined day"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined The"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined horse"
+          }
+        ]
+      },
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBD",
+            "parent": "VP",
+            "tag": "undefined raced"
+          },
+          {
+            "name": "SBAR",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "S",
+                "parent": "SBAR",
+                "children": [
+                  {
+                    "name": "NP",
+                    "parent": "S",
+                    "children": [
+                      {
+                        "name": "JJ",
+                        "parent": "NP",
+                        "tag": "undefined past"
+                      },
+                      {
+                        "name": "DT",
+                        "parent": "NP",
+                        "tag": "undefined the"
+                      },
+                      {
+                        "name": "NN",
+                        "parent": "NP",
+                        "tag": "undefined barn"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "VP",
+                    "parent": "S",
+                    "children": [
+                      {
+                        "name": "VBD",
+                        "parent": "VP",
+                        "tag": "undefined fell"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "PRP",
+                "parent": "NP",
+                "tag": "undefined I"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBP",
+                "parent": "VP",
+                "tag": "undefined know"
+              },
+              {
+                "name": "SBAR",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "S",
+                    "parent": "SBAR",
+                    "children": [
+                      {
+                        "name": "NP",
+                        "parent": "S",
+                        "children": [
+                          {
+                            "name": "NP",
+                            "parent": "NP",
+                            "children": [
+                              {
+                                "name": "DT",
+                                "parent": "NP",
+                                "tag": "undefined the"
+                              },
+                              {
+                                "name": "NNS",
+                                "parent": "NP",
+                                "tag": "undefined words"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "PP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "TO",
+            "parent": "PP",
+            "tag": "undefined to"
+          },
+          {
+            "name": "NP",
             "parent": "PP"
           }
         ]
@@ -190,36 +1346,112 @@
         "parent": "ROOT",
         "children": [
           {
-            "name": "DT the",
-            "parent": "NP"
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined that"
           },
           {
-            "name": "NN police",
-            "parent": "NP"
-          },
-          {
-            "name": "NN arrest",
-            "parent": "NP"
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined song"
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "PP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "IN",
+            "parent": "PP",
+            "tag": "undefined about"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
       {
         "name": "NP",
         "parent": "ROOT",
         "children": [
           {
-            "name": "DT the",
-            "parent": "NP"
-          },
-          {
-            "name": "NN drug",
-            "parent": "NP"
-          },
-          {
-            "name": "NNS dealers",
-            "parent": "NP"
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined the"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined queen"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBP",
+            "parent": "VP",
+            "tag": "undefined do"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "RB",
+        "parent": "ROOT",
+        "tag": "undefined n't"
       }
     ]
   },
@@ -231,22 +1463,9 @@
         "parent": "ROOT",
         "children": [
           {
-            "name": "VBP control",
-            "parent": "VP"
-          },
-          {
-            "name": "NP",
+            "name": "VB",
             "parent": "VP",
-            "children": [
-              {
-                "name": "DT the",
-                "parent": "NP"
-              },
-              {
-                "name": "NN street",
-                "parent": "NP"
-              }
-            ]
+            "tag": "undefined rhyme"
           }
         ]
       }
@@ -254,399 +1473,35 @@
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "NP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "NP",
-                    "parent": "NP",
-                    "children": [
-                      {
-                        "name": "DT The",
-                        "parent": "NP"
-                      },
-                      {
-                        "name": "NN man",
-                        "parent": "NP"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "SBAR",
-                    "parent": "NP",
-                    "children": [
-                      {
-                        "name": "WHNP",
-                        "parent": "SBAR",
-                        "children": [
-                          {
-                            "name": "WP who",
-                            "parent": "WHNP"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "S",
-                        "parent": "SBAR",
-                        "children": [
-                          {
-                            "name": "VP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "VBZ hunts",
-                                "parent": "VP"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "VP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "VBZ ducks",
-                                "parent": "VP"
-                              },
-                              {
-                                "name": "PRT",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "RP out",
-                                    "parent": "PRT"
-                                  }
-                                ]
-                              },
-                              {
-                                "name": "PP",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "IN on",
-                                    "parent": "PP"
-                                  },
-                                  {
-                                    "name": "NP",
-                                    "parent": "PP",
-                                    "children": [
-                                      {
-                                        "name": "NNS weekends",
-                                        "parent": "NP"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "SBAR",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "WHADVP",
-                    "parent": "SBAR",
-                    "children": [
-                      {
-                        "name": "WRB When",
-                        "parent": "WHADVP"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "S",
-                    "parent": "SBAR",
-                    "children": [
-                      {
-                        "name": "NP",
-                        "parent": "S",
-                        "children": [
-                          {
-                            "name": "NNP Fred",
-                            "parent": "NP"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "VP",
-                        "parent": "S",
-                        "children": [
-                          {
-                            "name": "VBZ eats",
-                            "parent": "VP"
-                          },
-                          {
-                            "name": "NP",
-                            "parent": "VP",
-                            "children": [
-                              {
-                                "name": "NN food",
-                                "parent": "NP"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "VP",
-                            "parent": "VP",
-                            "children": [
-                              {
-                                "name": "VBZ gets",
-                                "parent": "VP"
-                              },
-                              {
-                                "name": "VP",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "VBN thrown",
-                                    "parent": "VP"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT"
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "S",
-        "parent": "ROOT"
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "NNP Mary",
-            "parent": "NP"
-          }
-        ]
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "VP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "VBD gave",
-            "parent": "VP"
-          },
-          {
-            "name": "NP",
-            "parent": "VP",
-            "children": [
-              {
-                "name": "DT the",
-                "parent": "NP"
-              },
-              {
-                "name": "NN child",
-                "parent": "NP"
-              }
-            ]
-          },
-          {
-            "name": "SBAR",
-            "parent": "VP",
-            "children": [
-              {
-                "name": "S",
-                "parent": "SBAR",
-                "children": [
-                  {
-                    "name": "NP",
-                    "parent": "S",
-                    "children": [
-                      {
-                        "name": "DT the",
-                        "parent": "NP"
-                      },
-                      {
-                        "name": "NN dog",
-                        "parent": "NP"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "VP",
-                    "parent": "S",
-                    "children": [
-                      {
-                        "name": "VBD bit",
-                        "parent": "VP"
-                      },
-                      {
-                        "name": "NP",
-                        "parent": "VP",
-                        "children": [
-                          {
-                            "name": "DT a",
-                            "parent": "NP"
-                          },
-                          {
-                            "name": "NN bandaid",
-                            "parent": "NP"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT"
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
-    "children": [
-      {
-        "name": "S",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "DT The",
-            "parent": "NP"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NN girl",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "PRP I",
-            "parent": "NP"
-          }
-        ]
-      },
-      {
-        "name": "VP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "VBD convinced",
-            "parent": "VP"
-          },
-          {
-            "name": "SBAR",
-            "parent": "VP"
-          }
-        ]
-      }
-    ]
+    "children": []
   },
   {
     "name": "ROOT",
@@ -660,12 +1515,9 @@
             "parent": "S",
             "children": [
               {
-                "name": "PRP$ her",
-                "parent": "NP"
-              },
-              {
-                "name": "NNS children",
-                "parent": "NP"
+                "name": "PRP",
+                "parent": "NP",
+                "tag": "undefined She"
               }
             ]
           },
@@ -674,115 +1526,314 @@
             "parent": "S",
             "children": [
               {
-                "name": "VBP are",
-                "parent": "VP"
+                "name": "VBD",
+                "parent": "VP",
+                "tag": "undefined told"
+              },
+              {
+                "name": "NP",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "PRP",
+                    "parent": "NP",
+                    "tag": "undefined me"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "SBAR",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined a"
+          },
+          {
+            "name": "JJ",
+            "parent": "NP",
+            "tag": "undefined little"
+          },
+          {
+            "name": "JJ",
+            "parent": "NP",
+            "tag": "undefined white"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined lie"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "MD",
+            "parent": "VP",
+            "tag": "undefined will"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VB",
+            "parent": "VP",
+            "tag": "undefined come"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "ADVP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "RB",
+            "parent": "ADVP",
+            "tag": "undefined back"
+          }
+        ]
+      },
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "TO",
+                "parent": "VP",
+                "tag": "undefined to"
+              },
+              {
+                "name": "VP",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "VB",
+                    "parent": "VP",
+                    "tag": "undefined haunt"
+                  },
+                  {
+                    "name": "NP",
+                    "parent": "VP",
+                    "children": [
+                      {
+                        "name": "PRP",
+                        "parent": "NP",
+                        "tag": "undefined me"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NP",
+                "parent": "NP",
+                "children": [
+                  {
+                    "name": "DT",
+                    "parent": "NP",
+                    "tag": "undefined The"
+                  },
+                  {
+                    "name": "NN",
+                    "parent": "NP",
+                    "tag": "undefined dog"
+                  }
+                ]
+              },
+              {
+                "name": "SBAR",
+                "parent": "NP",
+                "children": [
+                  {
+                    "name": "IN",
+                    "parent": "SBAR",
+                    "tag": "undefined that"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "PRP",
+                "parent": "NP",
+                "tag": "undefined I"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBD",
+                "parent": "VP",
+                "tag": "undefined had"
               },
               {
                 "name": "ADVP",
                 "parent": "VP",
                 "children": [
                   {
-                    "name": "RB noisy",
-                    "parent": "ADVP"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "NP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "NNP Helen",
-                    "parent": "NP"
+                    "name": "RB",
+                    "parent": "ADVP",
+                    "tag": "undefined really"
                   }
                 ]
               },
               {
                 "name": "VP",
-                "parent": "S",
+                "parent": "VP",
                 "children": [
                   {
-                    "name": "VBZ is",
-                    "parent": "VP"
+                    "name": "VBD",
+                    "parent": "VP",
+                    "tag": "undefined loved"
                   },
                   {
-                    "name": "VP",
+                    "name": "NP",
                     "parent": "VP",
                     "children": [
                       {
-                        "name": "VBG expecting",
-                        "parent": "VP"
-                      },
-                      {
-                        "name": "S",
-                        "parent": "VP",
-                        "children": [
-                          {
-                            "name": "NP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "NN tomorrow",
-                                "parent": "NP"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "VP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "TO to",
-                                "parent": "VP"
-                              },
-                              {
-                                "name": "VP",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "VB be",
-                                    "parent": "VP"
-                                  },
-                                  {
-                                    "name": "NP",
-                                    "parent": "VP",
-                                    "children": [
-                                      {
-                                        "name": "DT a",
-                                        "parent": "NP"
-                                      },
-                                      {
-                                        "name": "JJ bad",
-                                        "parent": "NP"
-                                      },
-                                      {
-                                        "name": "NN day",
-                                        "parent": "NP"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "name": "NNS",
+                        "parent": "NP",
+                        "tag": "undefined bones"
                       }
                     ]
                   }
@@ -791,15 +1842,6 @@
             ]
           }
         ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT"
       }
     ]
   },
@@ -815,570 +1857,27 @@
   {
     "name": "ROOT",
     "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "DT The",
-            "parent": "NP"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NN horse",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "NP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "PRP I",
-                    "parent": "NP"
-                  }
-                ]
-              },
-              {
-                "name": "VP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "VBP know",
-                    "parent": "VP"
-                  },
-                  {
-                    "name": "SBAR",
-                    "parent": "VP",
-                    "children": [
-                      {
-                        "name": "S",
-                        "parent": "SBAR",
-                        "children": [
-                          {
-                            "name": "NP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "NP",
-                                "parent": "NP",
-                                "children": [
-                                  {
-                                    "name": "DT the",
-                                    "parent": "NP"
-                                  },
-                                  {
-                                    "name": "NNS words",
-                                    "parent": "NP"
-                                  }
-                                ]
-                              },
-                              {
-                                "name": "PP",
-                                "parent": "NP",
-                                "children": [
-                                  {
-                                    "name": "TO to",
-                                    "parent": "PP"
-                                  },
-                                  {
-                                    "name": "NP",
-                                    "parent": "PP",
-                                    "children": [
-                                      {
-                                        "name": "NP",
-                                        "parent": "NP",
-                                        "children": [
-                                          {
-                                            "name": "DT that",
-                                            "parent": "NP"
-                                          },
-                                          {
-                                            "name": "NN song",
-                                            "parent": "NP"
-                                          }
-                                        ]
-                                      },
-                                      {
-                                        "name": "PP",
-                                        "parent": "NP",
-                                        "children": [
-                                          {
-                                            "name": "IN about",
-                                            "parent": "PP"
-                                          },
-                                          {
-                                            "name": "NP",
-                                            "parent": "PP",
-                                            "children": [
-                                              {
-                                                "name": "DT the",
-                                                "parent": "NP"
-                                              },
-                                              {
-                                                "name": "NN queen",
-                                                "parent": "NP"
-                                              }
-                                            ]
-                                          },
-                                          {
-                                            "name": "VP",
-                                            "parent": "PP",
-                                            "children": [
-                                              {
-                                                "name": "VBP do",
-                                                "parent": "VP"
-                                              },
-                                              {
-                                                "name": "RB n't",
-                                                "parent": "VP"
-                                              },
-                                              {
-                                                "name": "VP",
-                                                "parent": "VP",
-                                                "children": [
-                                                  {
-                                                    "name": "VB rhyme",
-                                                    "parent": "VP"
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "NP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "PRP She",
-                    "parent": "NP"
-                  }
-                ]
-              },
-              {
-                "name": "VP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "VBD told",
-                    "parent": "VP"
-                  },
-                  {
-                    "name": "NP",
-                    "parent": "VP",
-                    "children": [
-                      {
-                        "name": "PRP me",
-                        "parent": "NP"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "SBAR",
-                    "parent": "VP",
-                    "children": [
-                      {
-                        "name": "S",
-                        "parent": "SBAR",
-                        "children": [
-                          {
-                            "name": "NP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "DT a",
-                                "parent": "NP"
-                              },
-                              {
-                                "name": "JJ little",
-                                "parent": "NP"
-                              },
-                              {
-                                "name": "JJ white",
-                                "parent": "NP"
-                              },
-                              {
-                                "name": "NN lie",
-                                "parent": "NP"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "VP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "MD will",
-                                "parent": "VP"
-                              },
-                              {
-                                "name": "VP",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "VB come",
-                                    "parent": "VP"
-                                  },
-                                  {
-                                    "name": "ADVP",
-                                    "parent": "VP",
-                                    "children": [
-                                      {
-                                        "name": "RB back",
-                                        "parent": "ADVP"
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "name": "S",
-                                    "parent": "VP",
-                                    "children": [
-                                      {
-                                        "name": "VP",
-                                        "parent": "S",
-                                        "children": [
-                                          {
-                                            "name": "TO to",
-                                            "parent": "VP"
-                                          },
-                                          {
-                                            "name": "VP",
-                                            "parent": "VP",
-                                            "children": [
-                                              {
-                                                "name": "VB haunt",
-                                                "parent": "VP"
-                                              },
-                                              {
-                                                "name": "NP",
-                                                "parent": "VP",
-                                                "children": [
-                                                  {
-                                                    "name": "PRP me",
-                                                    "parent": "NP"
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "NP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "NP",
-                    "parent": "NP",
-                    "children": [
-                      {
-                        "name": "DT The",
-                        "parent": "NP"
-                      },
-                      {
-                        "name": "NN dog",
-                        "parent": "NP"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "SBAR",
-                    "parent": "NP",
-                    "children": [
-                      {
-                        "name": "IN that",
-                        "parent": "SBAR"
-                      },
-                      {
-                        "name": "S",
-                        "parent": "SBAR",
-                        "children": [
-                          {
-                            "name": "NP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "PRP I",
-                                "parent": "NP"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "VP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "VBD had",
-                                "parent": "VP"
-                              },
-                              {
-                                "name": "ADVP",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "RB really",
-                                    "parent": "ADVP"
-                                  }
-                                ]
-                              },
-                              {
-                                "name": "VP",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "VBD loved",
-                                    "parent": "VP"
-                                  },
-                                  {
-                                    "name": "NP",
-                                    "parent": "VP",
-                                    "children": [
-                                      {
-                                        "name": "NNS bones",
-                                        "parent": "NP"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "SBAR",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "IN That",
-                    "parent": "SBAR"
-                  },
-                  {
-                    "name": "S",
-                    "parent": "SBAR",
-                    "children": [
-                      {
-                        "name": "NP",
-                        "parent": "S",
-                        "children": [
-                          {
-                            "name": "NNP Jill",
-                            "parent": "NP"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "VP",
-                        "parent": "S",
-                        "children": [
-                          {
-                            "name": "VBZ is",
-                            "parent": "VP"
-                          },
-                          {
-                            "name": "ADVP",
-                            "parent": "VP",
-                            "children": [
-                              {
-                                "name": "RB never",
-                                "parent": "ADVP"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "ADVP",
-                            "parent": "VP",
-                            "children": [
-                              {
-                                "name": "RB here",
-                                "parent": "ADVP"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "VP",
-                            "parent": "VP",
-                            "children": [
-                              {
-                                "name": "VBZ hurts",
-                                "parent": "VP"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "NP",
-                "parent": "S"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "DT The",
-            "parent": "NP"
-          },
-          {
-            "name": "NN man",
-            "parent": "NP"
-          }
-        ]
-      },
       {
         "name": "SBAR",
         "parent": "ROOT",
         "children": [
           {
-            "name": "WHNP",
+            "name": "IN",
             "parent": "SBAR",
-            "children": [
-              {
-                "name": "WP who",
-                "parent": "WHNP"
-              }
-            ]
+            "tag": "undefined That"
           },
           {
             "name": "S",
             "parent": "SBAR",
             "children": [
               {
-                "name": "VP",
+                "name": "NP",
                 "parent": "S",
                 "children": [
                   {
-                    "name": "NNS whistles",
-                    "parent": "VP"
+                    "name": "NNP",
+                    "parent": "NP",
+                    "tag": "undefined Jill"
                   }
                 ]
               }
@@ -1396,190 +1895,29 @@
         "parent": "ROOT",
         "children": [
           {
-            "name": "VBZ tunes",
-            "parent": "VP"
+            "name": "VBZ",
+            "parent": "VP",
+            "tag": "undefined is"
           },
           {
-            "name": "NP",
+            "name": "ADVP",
             "parent": "VP",
             "children": [
               {
-                "name": "NNS pianos",
-                "parent": "NP"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "DT The",
-            "parent": "NP"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "JJ old",
-        "parent": "ROOT"
-      },
-      {
-        "name": "NN man",
-        "parent": "ROOT"
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "ROOT",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "S",
-            "parent": "ROOT",
-            "children": [
-              {
-                "name": "VP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "VBP Have",
-                    "parent": "VP"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ROOT",
-    "children": [
-      {
-        "name": "NP",
-        "parent": "ROOT",
-        "children": [
-          {
-            "name": "NP",
-            "parent": "NP",
-            "children": [
-              {
-                "name": "DT the",
-                "parent": "NP"
-              },
-              {
-                "name": "NNS students",
-                "parent": "NP"
+                "name": "RB",
+                "parent": "ADVP",
+                "tag": "undefined never"
               }
             ]
           },
           {
-            "name": "SBAR",
-            "parent": "NP",
+            "name": "ADVP",
+            "parent": "VP",
             "children": [
               {
-                "name": "WHNP",
-                "parent": "SBAR",
-                "children": [
-                  {
-                    "name": "WP who",
-                    "parent": "WHNP"
-                  }
-                ]
-              },
-              {
-                "name": "S",
-                "parent": "SBAR",
-                "children": [
-                  {
-                    "name": "VP",
-                    "parent": "S",
-                    "children": [
-                      {
-                        "name": "VBD failed",
-                        "parent": "VP"
-                      },
-                      {
-                        "name": "NP",
-                        "parent": "VP",
-                        "children": [
-                          {
-                            "name": "DT the",
-                            "parent": "NP"
-                          },
-                          {
-                            "name": "NN exam",
-                            "parent": "NP"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "S",
-                        "parent": "VP",
-                        "children": [
-                          {
-                            "name": "VP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "VB take",
-                                "parent": "VP"
-                              },
-                              {
-                                "name": "NP",
-                                "parent": "VP",
-                                "children": [
-                                  {
-                                    "name": "DT the",
-                                    "parent": "NP"
-                                  },
-                                  {
-                                    "name": "NN supplementary",
-                                    "parent": "NP"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
+                "name": "RB",
+                "parent": "ADVP",
+                "tag": "undefined here"
               }
             ]
           }
@@ -1591,8 +1929,15 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "ROOT",
-        "parent": "ROOT"
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBZ",
+            "parent": "VP",
+            "tag": "undefined hurts"
+          }
+        ]
       }
     ]
   },
@@ -1613,8 +1958,15 @@
         "parent": "ROOT",
         "children": [
           {
-            "name": "DT The",
-            "parent": "NP"
+            "name": "NP",
+            "parent": "NP",
+            "children": [
+              {
+                "name": "DT",
+                "parent": "NP",
+                "tag": "undefined The"
+              }
+            ]
           }
         ]
       }
@@ -1624,8 +1976,9 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "NN raft",
-        "parent": "ROOT"
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined man"
       }
     ]
   },
@@ -1633,12 +1986,30 @@
     "name": "ROOT",
     "children": [
       {
-        "name": "ROOT",
+        "name": "S",
         "parent": "ROOT",
         "children": [
           {
-            "name": "S",
-            "parent": "ROOT"
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "NNS",
+                "parent": "VP",
+                "tag": "undefined whistles"
+              }
+            ]
+          },
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VBZ",
+                "parent": "VP",
+                "tag": "undefined tunes"
+              }
+            ]
           }
         ]
       }
@@ -1652,18 +2023,119 @@
         "parent": "ROOT",
         "children": [
           {
-            "name": "PRP We",
-            "parent": "NP"
+            "name": "NNS",
+            "parent": "NP",
+            "tag": "undefined pianos"
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined The"
+          },
+          {
+            "name": "JJ",
+            "parent": "NP",
+            "tag": "undefined old"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined man"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined the"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined boat"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
       {
         "name": "VP",
         "parent": "ROOT",
         "children": [
           {
-            "name": "VBD painted",
-            "parent": "VP"
+            "name": "VBP",
+            "parent": "VP",
+            "tag": "undefined Have"
           },
           {
             "name": "NP",
@@ -1674,12 +2146,297 @@
                 "parent": "NP",
                 "children": [
                   {
-                    "name": "DT the",
-                    "parent": "NP"
+                    "name": "DT",
+                    "parent": "NP",
+                    "tag": "undefined the"
                   },
                   {
-                    "name": "NN wall",
-                    "parent": "NP"
+                    "name": "NNS",
+                    "parent": "NP",
+                    "tag": "undefined students"
+                  }
+                ]
+              },
+              {
+                "name": "SBAR",
+                "parent": "NP",
+                "children": [
+                  {
+                    "name": "WHNP",
+                    "parent": "SBAR",
+                    "children": [
+                      {
+                        "name": "WP",
+                        "parent": "WHNP",
+                        "tag": "undefined who"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "S",
+                    "parent": "SBAR",
+                    "children": [
+                      {
+                        "name": "VP",
+                        "parent": "S",
+                        "children": [
+                          {
+                            "name": "VBD",
+                            "parent": "VP",
+                            "tag": "undefined failed"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined the"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined exam"
+          }
+        ]
+      },
+      {
+        "name": "S",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VP",
+            "parent": "S",
+            "children": [
+              {
+                "name": "VB",
+                "parent": "VP",
+                "tag": "undefined take"
+              },
+              {
+                "name": "NP",
+                "parent": "VP",
+                "children": [
+                  {
+                    "name": "DT",
+                    "parent": "NP",
+                    "tag": "undefined the"
+                  },
+                  {
+                    "name": "NN",
+                    "parent": "NP",
+                    "tag": "undefined supplementary"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined The"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined raft"
+          }
+        ]
+      },
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBD",
+            "parent": "VP",
+            "tag": "undefined floated"
+          },
+          {
+            "name": "PRT",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "RP",
+                "parent": "PRT",
+                "tag": "undefined down"
+              }
+            ]
+          },
+          {
+            "name": "SBAR",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "S",
+                "parent": "SBAR",
+                "children": [
+                  {
+                    "name": "NP",
+                    "parent": "S",
+                    "children": [
+                      {
+                        "name": "DT",
+                        "parent": "NP",
+                        "tag": "undefined the"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined river"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBD",
+            "parent": "VP",
+            "tag": "undefined sank"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "PRP",
+            "parent": "NP",
+            "tag": "undefined We"
+          }
+        ]
+      },
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBD",
+            "parent": "VP",
+            "tag": "undefined painted"
+          },
+          {
+            "name": "NP",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "NP",
+                "parent": "NP",
+                "children": [
+                  {
+                    "name": "DT",
+                    "parent": "NP",
+                    "tag": "undefined the"
+                  },
+                  {
+                    "name": "NN",
+                    "parent": "NP",
+                    "tag": "undefined wall"
                   }
                 ]
               },
@@ -1688,16 +2445,18 @@
                 "parent": "NP",
                 "children": [
                   {
-                    "name": "IN with",
-                    "parent": "PP"
+                    "name": "IN",
+                    "parent": "PP",
+                    "tag": "undefined with"
                   },
                   {
                     "name": "NP",
                     "parent": "PP",
                     "children": [
                       {
-                        "name": "NNS cracks",
-                        "parent": "NP"
+                        "name": "NNS",
+                        "parent": "NP",
+                        "tag": "undefined cracks"
                       }
                     ]
                   }
@@ -1711,179 +2470,337 @@
   },
   {
     "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
     "children": [
       {
-        "name": "ROOT",
+        "name": "S",
         "parent": "ROOT",
         "children": [
           {
-            "name": "S",
-            "parent": "ROOT",
+            "name": "NP",
+            "parent": "S",
             "children": [
               {
-                "name": "NP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "DT The",
-                    "parent": "NP"
-                  },
-                  {
-                    "name": "NN tycoon",
-                    "parent": "NP"
-                  }
-                ]
-              },
-              {
-                "name": "VP",
-                "parent": "S",
-                "children": [
-                  {
-                    "name": "VBD sold",
-                    "parent": "VP"
-                  },
-                  {
-                    "name": "SBAR",
-                    "parent": "VP",
-                    "children": [
-                      {
-                        "name": "S",
-                        "parent": "SBAR",
-                        "children": [
-                          {
-                            "name": "NP",
-                            "parent": "S",
-                            "children": [
-                              {
-                                "name": "NP",
-                                "parent": "NP",
-                                "children": [
-                                  {
-                                    "name": "DT the",
-                                    "parent": "NP"
-                                  },
-                                  {
-                                    "name": "JJ offshore",
-                                    "parent": "NP"
-                                  },
-                                  {
-                                    "name": "NN oil",
-                                    "parent": "NP"
-                                  },
-                                  {
-                                    "name": "NNS tracts",
-                                    "parent": "NP"
-                                  }
-                                ]
-                              },
-                              {
-                                "name": "PP",
-                                "parent": "NP",
-                                "children": [
-                                  {
-                                    "name": "IN for",
-                                    "parent": "PP"
-                                  },
-                                  {
-                                    "name": "NP",
-                                    "parent": "PP",
-                                    "children": [
-                                      {
-                                        "name": "NP",
-                                        "parent": "NP",
-                                        "children": [
-                                          {
-                                            "name": "DT a",
-                                            "parent": "NP"
-                                          },
-                                          {
-                                            "name": "NN lot",
-                                            "parent": "NP"
-                                          }
-                                        ]
-                                      },
-                                      {
-                                        "name": "PP",
-                                        "parent": "NP",
-                                        "children": [
-                                          {
-                                            "name": "IN of",
-                                            "parent": "PP"
-                                          },
-                                          {
-                                            "name": "NP",
-                                            "parent": "PP",
-                                            "children": [
-                                              {
-                                                "name": "NN money",
-                                                "parent": "NP"
-                                              }
-                                            ]
-                                          },
-                                          {
-                                            "name": "VP",
-                                            "parent": "PP",
-                                            "children": [
-                                              {
-                                                "name": "VBD wanted",
-                                                "parent": "VP"
-                                              },
-                                              {
-                                                "name": "S",
-                                                "parent": "VP",
-                                                "children": [
-                                                  {
-                                                    "name": "VP",
-                                                    "parent": "S",
-                                                    "children": [
-                                                      {
-                                                        "name": "TO to",
-                                                        "parent": "VP"
-                                                      },
-                                                      {
-                                                        "name": "VP",
-                                                        "parent": "VP",
-                                                        "children": [
-                                                          {
-                                                            "name": "VB kill",
-                                                            "parent": "VP"
-                                                          },
-                                                          {
-                                                            "name": "NP",
-                                                            "parent": "VP",
-                                                            "children": [
-                                                              {
-                                                                "name": "NNP JR",
-                                                                "parent": "NP"
-                                                              }
-                                                            ]
-                                                          }
-                                                        ]
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
+                "name": "DT",
+                "parent": "NP",
+                "tag": "undefined The"
               }
             ]
           }
         ]
       }
     ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined tycoon"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBD",
+            "parent": "VP",
+            "tag": "undefined sold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "SBAR",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "S",
+            "parent": "SBAR"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined the"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "JJ",
+        "parent": "ROOT",
+        "tag": "undefined offshore"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NN",
+        "parent": "ROOT",
+        "tag": "undefined oil"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NNS",
+        "parent": "ROOT",
+        "tag": "undefined tracts"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "PP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "IN",
+            "parent": "PP",
+            "tag": "undefined for"
+          },
+          {
+            "name": "NP",
+            "parent": "PP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "DT",
+            "parent": "NP",
+            "tag": "undefined a"
+          },
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined lot"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "PP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "IN",
+            "parent": "PP",
+            "tag": "undefined of"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "NP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "NN",
+            "parent": "NP",
+            "tag": "undefined money"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VBD",
+            "parent": "VP",
+            "tag": "undefined wanted"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "S",
+        "parent": "ROOT"
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "TO",
+            "parent": "VP",
+            "tag": "undefined to"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "VP",
+        "parent": "ROOT",
+        "children": [
+          {
+            "name": "VB",
+            "parent": "VP",
+            "tag": "undefined kill"
+          },
+          {
+            "name": "NP",
+            "parent": "VP",
+            "children": [
+              {
+                "name": "NNP",
+                "parent": "NP",
+                "tag": "undefined JR"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
+  },
+  {
+    "name": "ROOT",
+    "children": []
   }
 ]

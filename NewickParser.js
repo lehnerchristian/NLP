@@ -15,6 +15,8 @@ NewickParser.prototype.init = function () {
 
 NewickParser.prototype.parseToJSON = function (newickString) {
   var splitArray = newickString.split(" ").clean();
+  console.log(JSON.stringify(splitArray, null, 2));
+
   this.init();
 
   // stack of parent nodes
@@ -22,30 +24,33 @@ NewickParser.prototype.parseToJSON = function (newickString) {
   parentNodes.push(this.data);
 
   for (var i = 0; i < splitArray.length; i++) {
-    if (splitArray[i].length > 1 && splitArray[i].charAt(0) === "(") {
-      // Stanford parser prints for tags carriage returns
-      // or newlines - so we have to remove them
-      var tag = splitArray[i].slice(1);
-      parentNodes.push(this.insertChildNode(tag, parentNodes[parentNodes.length - 1]));
-    }
-    else if (splitArray[i].length > 1 && splitArray[i].charAt(0) !== ")") {
-      if (splitArray[i].charAt(splitArray[i].length - 2) === ")" && splitArray[i].charAt(splitArray[i].length - 1) === ")") {
-        var word = splitArray[i].replace(/\)/g, "");
-
-        if (parentNodes[parentNodes.length - 1]) {
-          parentNodes[parentNodes.length - 1].tag += " " + word;
-          console.log(parentNodes);
-          parentNodes.pop();
-          parentNodes.pop();
-        }
+    console.log(splitArray[i]);
+    if(splitArray[i].indexOf("ROOT") === -1) {
+      if (splitArray[i].length > 1 && splitArray[i].charAt(0) === "(") {
+        // Stanford parser prints for tags carriage returns
+        // or newlines - so we have to remove them
+        var tag = splitArray[i].slice(1);
+        parentNodes.push(this.insertChildNode(tag, parentNodes[parentNodes.length - 1]));
       }
-      else if (splitArray[i].charAt(splitArray[i].length - 1) === ")") {
-        var word = splitArray[i].replace(/\)/g, "");
+      else if (splitArray[i].length > 1 && splitArray[i].charAt(0) !== ")") {
+        if (splitArray[i].charAt(splitArray[i].length - 2) === ")" && splitArray[i].charAt(splitArray[i].length - 1) === ")") {
+          var word = splitArray[i].replace(/\)/g, "");
 
-        if (parentNodes[parentNodes.length - 1]) {
-          parentNodes[parentNodes.length - 1].tag += " " + word;
-          console.log(parentNodes);
-          parentNodes.pop();
+          if (parentNodes[parentNodes.length - 1]) {
+            parentNodes[parentNodes.length - 1].tag += " " + word;
+            //console.log(parentNodes);
+            parentNodes.pop();
+            parentNodes.pop();
+          }
+        }
+        else if (splitArray[i].charAt(splitArray[i].length - 1) === ")") {
+          var word = splitArray[i].replace(/\)/g, "");
+
+          if (parentNodes[parentNodes.length - 1]) {
+            parentNodes[parentNodes.length - 1].tag += " " + word;
+            //console.log(parentNodes);
+            parentNodes.pop();
+          }
         }
       }
     }
