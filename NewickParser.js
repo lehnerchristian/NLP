@@ -15,8 +15,7 @@ NewickParser.prototype.init = function () {
 
 NewickParser.prototype.parseToJSON = function (newickString) {
   var splitArray = newickString.split(" ").clean();
-  console.log(JSON.stringify(splitArray, null, 2));
-
+  //console.log(splitArray);
   this.init();
 
   // stack of parent nodes
@@ -24,45 +23,49 @@ NewickParser.prototype.parseToJSON = function (newickString) {
   parentNodes.push(this.data);
 
   for (var i = 0; i < splitArray.length; i++) {
-    console.log(splitArray[i]);
-    if(splitArray[i].indexOf("ROOT") === -1) {
-      if (splitArray[i].length > 1 && splitArray[i].charAt(0) === "(") {
-        // Stanford parser prints for tags carriage returns
-        // or newlines - so we have to remove them
-        var tag = splitArray[i].slice(1);
-        parentNodes.push(this.insertChildNode(tag, parentNodes[parentNodes.length - 1]));
+    if (splitArray[i].indexOf("ROOT") !== -1) {
+      //console.log("ROOT is already there!")
+      continue;
+    }
+    else if(splitArray[i].length < 1 || splitArray[i].charAt(0) === ")"){
+      //console.log("ELEMENT IS )")
+      continue;
+    }
+
+    if (splitArray[i].charAt(0) === "(") {
+      // Stanford parser prints for names carriage returns
+      // or newlines - so we have to remove them
+      var name = splitArray[i].slice(1);
+      parentNodes.push(this.insertChildNode(name, parentNodes[parentNodes.length - 1]));
+    }
+    else if (splitArray[i][splitArray[i].length-1] === ")") {
+      var word = splitArray[i].replace(/\)/g, "");
+      console.log(parentNodes)
+      parentNodes[parentNodes.length - 1].name += " " + word;
+
+      // Everything in this tag is with )
+      if(splitArray[i].charAt(0) === ")"){
+        //console.log("FIRST ELEMENT IS )")
+        continue;
       }
-      else if (splitArray[i].length > 1 && splitArray[i].charAt(0) !== ")") {
-        if (splitArray[i].charAt(splitArray[i].length - 2) === ")" && splitArray[i].charAt(splitArray[i].length - 1) === ")") {
-          var word = splitArray[i].replace(/\)/g, "");
 
-          if (parentNodes[parentNodes.length - 1]) {
-            parentNodes[parentNodes.length - 1].tag += " " + word;
-            //console.log(parentNodes);
-            parentNodes.pop();
-            parentNodes.pop();
-          }
-        }
-        else if (splitArray[i].charAt(splitArray[i].length - 1) === ")") {
-          var word = splitArray[i].replace(/\)/g, "");
-
-          if (parentNodes[parentNodes.length - 1]) {
-            parentNodes[parentNodes.length - 1].tag += " " + word;
-            //console.log(parentNodes);
-            parentNodes.pop();
-          }
+      // Removes for every ) one stack of node
+      for(var j=1; j<=splitArray[i].length;j++){
+        if(splitArray[i][splitArray[i].length-j] === ")"){
+          parentNodes.pop();
         }
       }
     }
   }
+  //this.print();
   return this.data;
-}
+};
 
 NewickParser.prototype.print = function () {
   console.log(JSON.stringify(this.data, null, 2));
 }
 
-NewickParser.prototype.insertChildNode = function (tag, parentNode) {
+NewickParser.prototype.insertChildNode = function (name, parentNode) {
   if (!parentNode) {
     return;
   }
@@ -71,7 +74,7 @@ NewickParser.prototype.insertChildNode = function (tag, parentNode) {
   }
 
   var child = {
-    name: tag,
+    name: name,
     parent: parentNode.name
   };
 
