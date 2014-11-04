@@ -23,6 +23,7 @@ var child = spawn("java", [
 ]);
 
 child.stdout.on('data', function (buffer) {
+  console.log("ON");
   var data = buffer.toString();
 
   if (data.indexOf("ROOT") !== -1) {
@@ -31,12 +32,11 @@ child.stdout.on('data', function (buffer) {
 
   result += data;
   if ( data.indexOf(".)))") > -1) {
+    console.log("RESULT");
     parse(result);
     result = "";
   }
 });
-
-
 
 child.stderr.on('data', function (data) {
   //console.log('stderr: ' + data);
@@ -48,10 +48,6 @@ child.on('close', function (code) {
 
 http.createServer(function (request, response) {
   response.writeHead(200);
-  if (parsedData.length <= 1) {
-    response.write("Parsing in progress...");
-    response.end();
-  }
   response.write(JSON.stringify(parsedData));
   response.end();
 }).listen(3000);
